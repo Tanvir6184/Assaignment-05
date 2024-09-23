@@ -4,19 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Daisy UI link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Style -->
+    <style>
+      .lexend-font {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <nav class="flex justify-between py-7 bg-[#F9F7F3]">
-      <button class="bg-[#B4F461] w-[110px] h-[49px] rounded-xl font-semibold">
+  <body class="lexend-font mx-auto">
+    <nav
+      class="flex justify-evenly lg:justify-between gap-x-5 lg:gap-x-0 py-7 bg-[#F9F7F3] px-10 w-[100%]"
+    >
+      <button
+        class="bg-[#B4F461] btn lg:w-[110px] lg:h-[49px] rounded-lg font-semibold"
+      >
         Blog
       </button>
       <div class="flex justify-center items-center gap-x-2 text-xl">
         <img src="./assets/logo.png" alt="" />
-        <h2 class="font-semibold">Donate Bangladesh</h2>
+        <h3 class="font-semibold text-sm">Donate Bangladesh</h3>
       </div>
       <div class="flex items-center gap-x-2">
         <img src="./assets/coin.png" alt="" /><span>5500</span>
-        <p>BDT</p>
+        <p class="hidden md:block">BDT</p>
       </div>
     </nav>
 

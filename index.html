@@ -25,19 +25,23 @@
       }
     </style>
   </head>
-  <body class="lexend-font w-[90%] mx-auto">
+  <body class="lexend-font mx-auto mb-20">
     <!-- navbar section -->
-    <nav class="flex justify-between py-7 bg-[#F9F7F3]">
-      <button class="bg-[#B4F461] w-[110px] h-[49px] rounded-xl font-semibold">
+    <nav
+      class="flex justify-evenly lg:justify-between gap-x-5 lg:gap-x-0 py-7 bg-[#F9F7F3] px-10 w-[100%]"
+    >
+      <button
+        class="bg-[#B4F461] btn lg:w-[110px] lg:h-[49px] rounded-lg font-semibold"
+      >
         Blog
       </button>
       <div class="flex justify-center items-center gap-x-2 text-xl">
         <img src="./assets/logo.png" alt="" />
-        <h2 class="font-semibold">Donate Bangladesh</h2>
+        <h3 class="font-semibold text-sm">Donate Bangladesh</h3>
       </div>
       <div class="flex items-center gap-x-2">
         <img src="./assets/coin.png" alt="" /><span>5500</span>
-        <p>BDT</p>
+        <p class="hidden md:block">BDT</p>
       </div>
     </nav>
     <!-- navbar section ended -->
@@ -45,21 +49,21 @@
     <!-- top two button -->
     <div class="text-center my-10">
       <button class="btn btn-outline">Donation</button>
-      <button class="btn btn-outline">History</button>
+      <button id="btn-history" class="btn btn-outline">History</button>
     </div>
 
-    <main class="space-y-8">
+    <main class="space-y-8 px-10">
       <!-- Card One -->
 
       <div
-        class="flex justify-around p-8 border-solid border-2 border-[#D4D4D7] border-opacity-40 rounded-xl"
+        class="flex flex-col lg:flex-row lg:justify-around p-8 border-solid border-2 border-[#D4D4D7] border-opacity-40 rounded-xl"
       >
-        <div class="w-[522px]">
+        <div class="lg:w-[522px]">
           <img src="assets/noakhali.png" alt="Album" />
         </div>
-        <div class="w-[522px] space-y-5">
+        <div class="lg:w-[522px] space-y-4">
           <button class="flex items-center gap-x-1">
-            <img src="./assets/coin.png" alt="" /> <span>0</span>
+            <img src="./assets/coin.png" alt="" /> <span>600</span>
             <p>BDT</p>
           </button>
           <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -71,7 +75,7 @@
             relief efforts and making a positive impact on the lives of those in
             need.
           </p>
-          <div class="space-y-4">
+          <div class="space-y-9">
             <div class="grid grid-cols-1 h-[56px]">
               <input
                 type="text"
@@ -90,12 +94,12 @@
       </div>
       <!-- Card Two -->
       <div
-        class="flex justify-around p-8 border-solid border-2 border-[#D4D4D7] border-opacity-40 rounded-xl"
+        class="flex flex-col lg:flex-row lg:justify-around p-8 border-solid border-2 border-[#D4D4D7] border-opacity-40 rounded-xl"
       >
-        <div class="w-[522px]">
+        <div class="lg:w-[522px]">
           <img src="assets/feni.png" alt="Album" />
         </div>
-        <div class="w-[522px] space-y-4">
+        <div class="lg:w-[522px] space-y-4">
           <button class="flex items-center gap-x-1">
             <img src="./assets/coin.png" alt="" /> <span>600</span>
             <p>BDT</p>
@@ -130,13 +134,13 @@
       </div>
       <!-- Card Three -->
       <div
-        class="flex justify-around p-8 border-solid border-2 border-[#D4D4D7] border-opacity-40 rounded-xl"
+        class="flex flex-col lg:flex-row lg:justify-around p-8 border-solid border-2 border-[#D4D4D7] border-opacity-40 rounded-xl"
       >
         <div class="lg:w-[522px]">
           <img src="assets/quota-protest.png" alt="Album" />
         </div>
 
-        <div class="w-[522px] space-y-4">
+        <div class="lg:w-[522px] space-y-4">
           <button class="flex items-center gap-x-1">
             <img src="./assets/coin.png" alt="" /> <span>2400</span>
             <p>BDT</p>
@@ -171,6 +175,6 @@
         </div>
       </div>
     </main>
-    <a href="./history.html"></a>
+    <script src="./javaScript/home.js"></script>
   </body>
 </html>
