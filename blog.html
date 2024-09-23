@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Daisy UI link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Style -->
+    <style>
+      .lexend-font {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="lexend-font mx-auto mb-20">
+    <nav
+      class="flex justify-evenly lg:justify-between gap-x-5 lg:gap-x-0 py-7 bg-[#F9F7F3] px-10 w-[100%]"
+    >
+      <button
+        class="bg-[#B4F461] btn lg:w-[110px] lg:h-[49px] rounded-lg font-semibold"
+      >
+        Home
+      </button>
+      <div class="flex justify-center items-center gap-x-2 text-xl">
+        <img src="./assets/logo.png" alt="" />
+        <h3 class="font-semibold text-sm lg:text-xl">Donate Bangladesh</h3>
+      </div>
+      <div class="flex items-center gap-x-2">
+        <img src="./assets/coin.png" alt="" /><span>5500</span>
+        <p class="hidden md:block">BDT</p>
+      </div>
+    </nav>
+    <main class="w-[90%] mx-auto">
+      <!-- important FAQ -->
+      <div class="flex items-center">
+        <h1 class="font-extrabold text-[2rem] my-10">important FAQ</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-10"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+          />
+        </svg>
+      </div>
+      <!-- important FAQ closed -->
+      <div
+        class="collapse collapse-arrow bg-base-200 border-solid border-2 border-[#D4D4D7] border-opacity-40 shadow-xl"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is document object model?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model, often referred to as the DOM, is a
+            critical component of web technology. It presents a structured,
+            tree-like representation of a web document, where every element of
+            the webpage, such as images, paragraphs, and headers, is represented
+            as an object or a 'node'. This structure allows scripts, typically
+            written in JavaScript, to interact with and manipulate the content,
+            structure, and style of the webpage in a dynamic and interactive
+            manner.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-base-200 border-solid border-2 border-[#D4D4D7] border-opacity-40 shadow-xl"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you select element from a DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Suppose you're looking to modify the text on your webpage using
+            JavaScript, maybe in reaction to user inputs, and you need specific
+            text to change accordingly. The initial step is to choose, or locate
+            the correct element within the DOM. Similar to how you select text
+            in a word processor for editing, this selection can be accomplished
+            through different methods, such as .getElementById() and
+            .querySelector(). Think of these as ways to search for the element
+            you need.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-base-200 border-solid border-2 border-[#D4D4D7] border-opacity-40 shadow-xl"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation refers to the process of using event propagation
+            (bubbling) to handle events at a higher level in the DOM than the
+            element on which the event originated. It allows us to attach a
+            single event listener for elements that exist now or in the future.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-base-200 border-solid border-2 border-[#D4D4D7] border-opacity-40 shadow-xl"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an elements attributes and styles using the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The classList object only provide methods to change the class of an
+            element. If you want to change other attributes like id , href , or
+            src , you can use the setAttribute() method. The setAttribute()
+            method accepts two arguments: The name of the attribute to set.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
