@@ -38,11 +38,13 @@
       </button>
       <div class="flex justify-center items-center gap-x-2 text-xl">
         <img src="./assets/logo.png" alt="" />
-        <h3 class="font-semibold text-sm">Donate Bangladesh</h3>
+        <h3 class="font-semibold text-xl hidden md:block">Donate Bangladesh</h3>
       </div>
       <div class="flex items-center gap-x-2">
-        <img src="./assets/coin.png" alt="" /><span>5500</span>
-        <p class="hidden md:block">BDT</p>
+        <img src="./assets/coin.png" alt="" /><span id="minus-Amount"
+          >5500</span
+        >
+        <p>BDT</p>
       </div>
     </nav>
     <!-- navbar section ended -->
@@ -64,7 +66,8 @@
         </div>
         <div class="lg:w-[522px] space-y-4">
           <button class="flex items-center gap-x-1">
-            <img src="./assets/coin.png" alt="" /> <span>600</span>
+            <img src="./assets/coin.png" alt="" />
+            <span id="donation-added-amount">600</span>
             <p>BDT</p>
           </button>
           <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -81,11 +84,12 @@
               <input
                 type="text"
                 name=""
-                id=""
+                id="card-one-input-field"
                 placeholder="Write Donation Amount"
               />
             </div>
             <button
+              id="card-one-main-btn"
               class="bg-[#B4F461] w-[100%] h-[49px] rounded-xl col-span-1 font-semibold"
             >
               Blog
@@ -176,6 +180,23 @@
         </div>
       </div>
     </main>
+    <!-- Modal added  -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- script file -->
+    <script src="./javaScript/utilities.js"></script>
     <script src="./javaScript/home.js"></script>
   </body>
 </html>
