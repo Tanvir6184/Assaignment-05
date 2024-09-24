@@ -57,9 +57,9 @@
     <!-- top two button closed -->
 
     <!-- blog button html  -->
-    <main id="blog-main-html" class=" w-[90%] mx-auto"></main>
+    <main id="blog-main-html" class="hidden w-[90%] mx-auto">
       <!-- important FAQ -->
-      <div  class="flex items-center">
+      <div class="flex items-center">
         <h1 class="font-extrabold text-[2rem] my-10">important FAQ</h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,6 @@
           />
         </svg>
       </div>
-      
 
       <div
         class="collapse collapse-arrow bg-base-200 border-solid border-2 border-[#D4D4D7] border-opacity-40 shadow-xl"
@@ -155,11 +154,14 @@
     <!-- important FAQ closed -->
 
     <!-- transaction button start  -->
-    <div id="transaction-container" class="hidden"><h2>Transaction History</h2></div>
+    <div id="transaction-container" class="hidden">
+      <h2 id="transaction-item">Transaction History</h2>
+      <div id="transaction-added"></div>
+    </div>
 
     <!-- transaction button end  -->
 
-    <main id="donation-card-main" class="hidden space-y-8 px-10">
+    <main id="donation-card-main" class="space-y-8 px-10">
       <!-- Card One -->
 
       <div

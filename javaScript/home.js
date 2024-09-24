@@ -40,9 +40,9 @@ document.getElementById('card-one-main-btn').addEventListener('click', function(
 
     //    Transaction history
         const p = document.createElement('p');
-        p.innerText = `Added: ${mainAccount} Tk. Balance ${newMinusAmount}`
+        p.innerText = `Added: ${firstField} Tk. Balance ${newMinusAmount}`
         console.log(p)
-        document.getElementById('transaction-container').appendChild(p)
+        document.getElementById('transaction-added').appendChild(p)
         
 
     } else {
@@ -115,36 +115,3 @@ document.getElementById('card-three-main-btn').addEventListener('click', functio
 
 
 
-// const donateBtn = document.getElementById('card-one-main-btn');
-// const donateAmount = document.getElementById('card-one-input-field');
-// // const modalId = document.getElementById('my_modal_1');
-// const minusAmountElement = document.getElementById('minus-Amount');
-// const donationAddedAmount = document.getElementById('donation-added-amount');
-
-// donateBtn.addEventListener('click', function() {
-//     const inputValue = Number(donateAmount.value); 
-    
-//     if (isNaN(inputValue) || inputValue < 1) {
-//         alert('Please provide a valid donation amount');
-//         return;
-//     }
-
-//     const currentAddedAmount = Number(donationAddedAmount.innerText);
-//     const currentMinusAmount = Number(minusAmountElement.innerText);
-
-   
-//     const newTotalAddedAmount = currentAddedAmount + inputValue;
-//     donationAddedAmount.innerText = newTotalAddedAmount;
-
-   
-//     const newMinusAmount = currentMinusAmount - inputValue;
-//     if (newMinusAmount >= 0) {
-//         minusAmountElement.innerText = newMinusAmount;
-//     } else {
-//         alert('Insufficient balance');
-//         return;
-//     }
-
-//     // Show the modal
-//     modalId.showModal();
-// });

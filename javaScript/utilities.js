@@ -7,13 +7,11 @@ function getInputFieldValueId(id){
 
 
 
-
 function getAddedAmountValueById(id){
     const addedAmountField = document.getElementById(id).innerText;
     const addedAmountFieldNumber = parseFloat(addedAmountField);
     return addedAmountFieldNumber;
 }
-
 
 
 function getMinusFigure(id){
@@ -23,7 +21,7 @@ function getMinusFigure(id){
 }
 
 
-function ShowSomethingById(){
+function ShowSomethingById(id){
     document.getElementById('donation-card-main').classList.add('hidden')
     document.getElementById('blog-main-html').classList.add('hidden')
     document.getElementById('transaction-container').classList.add('hidden')
