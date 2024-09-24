@@ -12,91 +12,125 @@ document.getElementById('nav-blog-button').addEventListener('click', function(){
 
 
 
-// top two button color 
-function changeButtonColor(clickedButton){
-    const button = document.querySelectorAll('.btn');
-    button.forEach((button) =>  {
-    button.classList.remove('bg-yellow-600')
-    button.classList.add(button.getAttribute('data-original-color'))
-})
-
-}
-
-
-
-
-
-// const addedAmount = document.getElementById('donation-added-amount')
-
-
-
+const modalId1 = document.getElementById('my_modal_1');
 document.getElementById('card-one-main-btn').addEventListener('click', function(){
 
-    const modal = my_modal_1.showModal()
-    console.log(modal)
+    const firstField = getInputFieldValueId('card-one-input-field');
 
-    const inputFieldMoney = getInputFieldValueId('card-one-input-field') ;
-    const minus = getMinusFigure ('minus-Amount')
-    
-
-
-    if(isNaN(inputFieldMoney) || inputFieldMoney === "" || inputFieldMoney < 1 || minus < 0 ){
-        alert('Provide valid number');
-    }
-    else{
-    
-    
-        const fieldToNumber = getAddedAmountValueById('donation-added-amount');
-        const TotalAmount = fieldToNumber + inputFieldMoney;
-        document.getElementById('donation-added-amount').innerText = TotalAmount;
-        
-        const minusFunction = getMinusFigure('minus-Amount');
-        const totalMinusAmount = minusFunction - inputFieldMoney;
-        document.getElementById('minus-Amount').innerText = totalMinusAmount;
-        
-        
+    if(isNaN(firstField) || firstField === "" || firstField < 1){
+        alert('Provide valid number')
+        return ;
     }
 
-    
+    const addedAmountToNumber = getAddedAmountValueById('donation-added-amount')
+    const totalBalance = addedAmountToNumber + firstField;
+    document.getElementById('donation-added-amount').innerText = totalBalance;
+
+
+    const mainAccount = getMinusFigure('minus-Amount')
+    const newMinusAmount = mainAccount - firstField;
+    if (newMinusAmount >= 0) {
+       document.getElementById('minus-Amount').innerText = newMinusAmount;
+    } else {
+        alert('Insufficient balance');
+        return;
+    }
+    modalId1.showModal();
 })
 
 
 
+
+
+const modalId2 = document.getElementById('my_modal_1');
 document.getElementById('card-two-main-btn').addEventListener('click', function(){
 
-    const secondInputField = getInputFieldValueId('input-field-two')
-    const minus = getMinusFigure('minus-Amount')
+    const secondField = getInputFieldValueId('input-field-two');
 
-    if(isNaN(secondInputField) ||  secondInputField === "" || secondInputField < 1 || minus < 0 ){
+    if(isNaN(secondField) || secondField === "" || secondField < 1){
         alert('Provide valid number')
+        return ;
     }
-    else{
-        const inputNumberTwo = getAddedAmountValueById('added-amount');
-        const totalAddedAmount = secondInputField + inputNumberTwo;
-        document.getElementById('added-amount').innerText = totalAddedAmount;
+
+    const addedAmountToNumber = getAddedAmountValueById('added-amount')
+    const totalBalance = addedAmountToNumber + secondField;
+    document.getElementById('added-amount').innerText = totalBalance;
 
 
-        const mainAccount = getMinusFigure('minus-Amount');
-        const totalMinusAmount = mainAccount - secondInputField;
-        document.getElementById('minus-Amount').innerText = totalMinusAmount;
+    const mainAccount = getMinusFigure('minus-Amount')
+    const newMinusAmount = mainAccount - secondField;
+    if (newMinusAmount >= 0) {
+       document.getElementById('minus-Amount').innerText = newMinusAmount;
+    } else {
+        alert('Insufficient balance');
+        return;
     }
+    modalId2.showModal();
 })
 
 
 
+
+const modalId3 = document.getElementById('my_modal_1');
 document.getElementById('card-three-main-btn').addEventListener('click', function(){
 
     const thirdField = getInputFieldValueId('third-input-field');
 
     if(isNaN(thirdField) || thirdField === "" || thirdField < 1){
         alert('Provide valid number')
+        return ;
     }
 
     const inputThirdToNumber = getAddedAmountValueById('third-added-amount')
     const totalBalance = inputThirdToNumber + thirdField;
     document.getElementById('third-added-amount').innerText = totalBalance;
 
+
     const mainAccount = getMinusFigure('minus-Amount')
-    const totalMinusAmount = mainAccount - thirdField;
-    document.getElementById('minus-Amount').innerText = totalMinusAmount;
+    const newMinusAmount = mainAccount - thirdField;
+    if (newMinusAmount >= 0) {
+       document.getElementById('minus-Amount').innerText = newMinusAmount;
+    } else {
+        alert('Insufficient balance');
+        return;
+    }
+    modalId3.showModal();
+
+
 })
+
+
+
+// const donateBtn = document.getElementById('card-one-main-btn');
+// const donateAmount = document.getElementById('card-one-input-field');
+// // const modalId = document.getElementById('my_modal_1');
+// const minusAmountElement = document.getElementById('minus-Amount');
+// const donationAddedAmount = document.getElementById('donation-added-amount');
+
+// donateBtn.addEventListener('click', function() {
+//     const inputValue = Number(donateAmount.value); 
+    
+//     if (isNaN(inputValue) || inputValue < 1) {
+//         alert('Please provide a valid donation amount');
+//         return;
+//     }
+
+//     const currentAddedAmount = Number(donationAddedAmount.innerText);
+//     const currentMinusAmount = Number(minusAmountElement.innerText);
+
+   
+//     const newTotalAddedAmount = currentAddedAmount + inputValue;
+//     donationAddedAmount.innerText = newTotalAddedAmount;
+
+   
+//     const newMinusAmount = currentMinusAmount - inputValue;
+//     if (newMinusAmount >= 0) {
+//         minusAmountElement.innerText = newMinusAmount;
+//     } else {
+//         alert('Insufficient balance');
+//         return;
+//     }
+
+//     // Show the modal
+//     modalId.showModal();
+// });
