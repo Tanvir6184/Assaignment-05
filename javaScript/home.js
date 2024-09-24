@@ -1,14 +1,19 @@
 
-document.getElementById('btn-history').addEventListener('click', function(){
-    window.location.href = 'history.html'
-})
-
-
-
 document.getElementById('nav-blog-button').addEventListener('click', function(){
-    window.location.href = 'blog.html'
-    
+    ShowSomethingById('blog-main-html')
 })
+
+document.getElementById('donation-btn').addEventListener('click', function(){
+    ShowSomethingById('donation-card-main')
+})
+
+document.getElementById('btn-history').addEventListener('click', function(){
+    ShowSomethingById('transaction-container');
+})
+
+
+
+
 
 
 
@@ -31,6 +36,15 @@ document.getElementById('card-one-main-btn').addEventListener('click', function(
     const newMinusAmount = mainAccount - firstField;
     if (newMinusAmount >= 0) {
        document.getElementById('minus-Amount').innerText = newMinusAmount;
+
+
+    //    Transaction history
+        const p = document.createElement('p');
+        p.innerText = `Added: ${mainAccount} Tk. Balance ${newMinusAmount}`
+        console.log(p)
+        document.getElementById('transaction-container').appendChild(p)
+        
+
     } else {
         alert('Insufficient balance');
         return;
