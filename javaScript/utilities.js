@@ -5,11 +5,16 @@ function getInputFieldValueId(id){
  return inputNumber;
 }
 
+
+
+
 function getAddedAmountValueById(id){
     const addedAmountField = document.getElementById(id).innerText;
     const addedAmountFieldNumber = parseFloat(addedAmountField);
     return addedAmountFieldNumber;
 }
+
+
 
 function getMinusFigure(id){
     const minusAmountText = document.getElementById(id).innerText;

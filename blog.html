@@ -27,21 +27,23 @@
   </head>
   <body class="lexend-font mx-auto mb-20">
     <nav
-      class="flex justify-evenly lg:justify-between gap-x-5 lg:gap-x-0 py-7 bg-[#F9F7F3] px-10 w-[100%]"
+      class="flex justify-evenly lg:justify-between gap-x-5 lg:gap-x-0 py-7 bg-[#F9F7F3] px-10 w-[100%] z-100 top-0 sticky"
     >
       <button
-        id="nav-home-button"
+        id="nav-blog-button"
         class="bg-[#B4F461] btn lg:w-[110px] lg:h-[49px] rounded-lg font-semibold"
       >
-        Home
+        Blog
       </button>
       <div class="flex justify-center items-center gap-x-2 text-xl">
         <img src="./assets/logo.png" alt="" />
-        <h3 class="font-semibold text-sm lg:text-xl">Donate Bangladesh</h3>
+        <h3 class="font-semibold text-xl hidden md:block">Donate Bangladesh</h3>
       </div>
       <div class="flex items-center gap-x-2">
-        <img src="./assets/coin.png" alt="" /><span>5500</span>
-        <p class="hidden md:block">BDT</p>
+        <img src="./assets/coin.png" alt="" /><span id="minus-Amount"
+          >5500</span
+        >
+        <p>BDT</p>
       </div>
     </nav>
     <main class="w-[90%] mx-auto">
@@ -138,6 +140,7 @@
         </div>
       </div>
     </main>
+
     <script src="./javaScript/home.js"></script>
   </body>
 </html>

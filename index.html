@@ -28,7 +28,7 @@
   <body class="lexend-font mx-auto mb-20">
     <!-- navbar section -->
     <nav
-      class="flex justify-evenly lg:justify-between gap-x-5 lg:gap-x-0 py-7 bg-[#F9F7F3] px-10 w-[100%]"
+      class="flex justify-evenly lg:justify-between gap-x-5 lg:gap-x-0 py-7 bg-[#F9F7F3] px-10 w-[100%] z-100 top-0 sticky"
     >
       <button
         id="nav-blog-button"
@@ -51,8 +51,8 @@
 
     <!-- top two button -->
     <div class="text-center my-10">
-      <button class="btn btn-outline">Donation</button>
-      <button id="btn-history" class="btn btn-outline">History</button>
+      <button id="donation-btn" class="btn">Donation</button>
+      <button id="btn-history" class="btn">History</button>
     </div>
 
     <main class="space-y-8 px-10">
@@ -90,9 +90,9 @@
             </div>
             <button
               id="card-one-main-btn"
-              class="bg-[#B4F461] w-[100%] h-[49px] rounded-xl col-span-1 font-semibold"
+              class="bg-[#B4F461] w-[100%] h-[49px] rounded-xl col-span-1 font-semibold btn"
             >
-              Blog
+              Donate Now
             </button>
           </div>
         </div>
@@ -106,7 +106,8 @@
         </div>
         <div class="lg:w-[522px] space-y-4">
           <button class="flex items-center gap-x-1">
-            <img src="./assets/coin.png" alt="" /> <span>600</span>
+            <img src="./assets/coin.png" alt="" />
+            <span id="added-amount">600</span>
             <p>BDT</p>
           </button>
           <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
@@ -125,14 +126,15 @@
               <input
                 type="text"
                 name=""
-                id=""
+                id="input-field-two"
                 placeholder="Write Donation Amount"
               />
             </div>
             <button
-              class="bg-[#B4F461] w-[100%] h-[49px] rounded-xl col-span-1 font-semibold"
+              id="card-two-main-btn"
+              class="bg-[#B4F461] w-[100%] h-[49px] rounded-xl col-span-1 font-semibold btn"
             >
-              Blog
+              Donate Now
             </button>
           </div>
         </div>
@@ -147,7 +149,8 @@
 
         <div class="lg:w-[522px] space-y-4">
           <button class="flex items-center gap-x-1">
-            <img src="./assets/coin.png" alt="" /> <span>2400</span>
+            <img src="./assets/coin.png" alt="" />
+            <span id="third-added-amount">2400</span>
             <p>BDT</p>
           </button>
           <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
@@ -167,14 +170,15 @@
               <input
                 type="text"
                 name=""
-                id=""
+                id="third-input-field"
                 placeholder="Write Donation Amount"
               />
             </div>
             <button
-              class="bg-[#B4F461] w-[100%] h-[49px] rounded-xl col-span-1 font-semibold"
+              id="card-three-main-btn"
+              class="bg-[#B4F461] w-[100%] h-[49px] rounded-xl col-span-1 font-semibold btn"
             >
-              Blog
+              Donate Now
             </button>
           </div>
         </div>
@@ -182,19 +186,22 @@
     </main>
     <!-- Modal added  -->
     <!-- Open the modal using ID.showModal() method -->
-    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+
     <dialog id="my_modal_1" class="modal">
-      <div class="modal-box">
-        <h3 class="text-lg font-bold">Hello!</h3>
-        <p class="py-4">Press ESC key or click the button below to close</p>
+      <div class="modal-box bg-[#B4F461]">
+        <h3 class="text-4xl font-bold">Thank You!</h3>
+        <p class="py-4 text-lg font-semibold">
+          We are really glad about your donation. Keep helping people to make a
+          better Bangladesh.
+        </p>
         <div class="modal-action">
           <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">Close</button>
+            <button class="btn bg-[#B4F461]">Close</button>
           </form>
         </div>
       </div>
     </dialog>
+
     <!-- script file -->
     <script src="./javaScript/utilities.js"></script>
     <script src="./javaScript/home.js"></script>
