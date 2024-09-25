@@ -32,6 +32,7 @@ document.getElementById('btn-history').addEventListener('click', function(){
 const modalId1 = document.getElementById('my_modal_1');
 document.getElementById('card-one-main-btn').addEventListener('click', function(){
 
+    const inputField = document.getElementById('card-one-input-field')
     const firstField = getInputFieldValueId('card-one-input-field');
 
     if(isNaN(firstField) || firstField === "" || firstField < 1){
@@ -61,6 +62,8 @@ document.getElementById('card-one-main-btn').addEventListener('click', function(
         `;
         document.getElementById('transaction-added').appendChild(div);
 
+        inputField.value = "";
+
     } else {
         alert('Insufficient balance');
         return;
@@ -75,6 +78,7 @@ document.getElementById('card-one-main-btn').addEventListener('click', function(
 const modalId2 = document.getElementById('my_modal_1');
 document.getElementById('card-two-main-btn').addEventListener('click', function(){
 
+    const secondInputField = document.getElementById('input-field-two')
     const secondField = getInputFieldValueId('input-field-two');
 
     if(isNaN(secondField) || secondField === "" || secondField < 1){
@@ -102,6 +106,7 @@ document.getElementById('card-two-main-btn').addEventListener('click', function(
        `;
        document.getElementById('transaction-added').appendChild(div);
 
+        secondInputField.value = "";
 
     } else {
         alert('Insufficient balance');
@@ -116,6 +121,7 @@ document.getElementById('card-two-main-btn').addEventListener('click', function(
 const modalId3 = document.getElementById('my_modal_1');
 document.getElementById('card-three-main-btn').addEventListener('click', function(){
 
+    const inputFieldThird = document.getElementById('third-input-field')
     const thirdField = getInputFieldValueId('third-input-field');
 
     if(isNaN(thirdField) || thirdField === "" || thirdField < 1){
@@ -142,6 +148,8 @@ document.getElementById('card-three-main-btn').addEventListener('click', functio
        <p>date and time: ${dateAndTime} </p>
        `;
        document.getElementById('transaction-added').appendChild(div);
+
+        inputFieldThird.value = "";
 
     } else {
         alert('Insufficient balance');
