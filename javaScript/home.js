@@ -54,7 +54,7 @@ document.getElementById('card-one-main-btn').addEventListener('click', function(
         const div = document.createElement('div');
         const currentDate = new Date();
         const dateAndTime = currentDate.toLocaleString()
-        div.classList.add('bg-gray-100', 'w-full', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
+        div.classList.add('bg-gray-100', 'w-[90%]', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
         div.innerHTML = `
         <h4 class = "text-lg font-bold">${firstField} Taka is Donated for  donated for Flood at Noakhali, Bangladesh</h4>
         <p>date and time: ${dateAndTime} </p>
@@ -95,7 +95,7 @@ document.getElementById('card-two-main-btn').addEventListener('click', function(
        const div = document.createElement('div');
        const currentDate = new Date();
        const dateAndTime = currentDate.toLocaleString()
-       div.classList.add('bg-gray-100', 'w-full', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
+       div.classList.add('bg-gray-100', 'w-[90%]', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
        div.innerHTML = `
        <h4 class = "text-lg font-bold">${secondField} Taka is Donated for  donated for Flood relief at Feni, Bangladesh</h4>
        <p>date and time: ${dateAndTime} </p>
@@ -136,7 +136,7 @@ document.getElementById('card-three-main-btn').addEventListener('click', functio
        const div = document.createElement('div');
        const currentDate = new Date();
        const dateAndTime = currentDate.toLocaleString()
-       div.classList.add('bg-gray-100', 'w-full', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
+       div.classList.add('bg-gray-100', 'w-[90%]', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
        div.innerHTML = `
        <h4 class = "text-lg font-bold">${thirdField} Taka is Donated for  Aid for Injured in the Quota Movement</h4>
        <p>date and time: ${dateAndTime} </p>
