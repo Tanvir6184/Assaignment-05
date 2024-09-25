@@ -8,30 +8,6 @@ document.getElementById('donation-btn').addEventListener('click', function(){
 })
 
 
-// window.addEventListener('scroll', function(){
-
-//     const scrolled = document.getElementById('navbar');
-
-//     if(window.scrollY > 50){
-//         scrolled.classList.add('backdrop:blur-md')
-//     }
-//     else{
-//         scrolled.classList.remove('backdrop:blur-md')
-//     }
-// })
-
-
-
-// document.getElementById('donation-btn').addEventListener('click', function(){
-
-//     this.classList.remove('bg-gray-400')
-//     this.classList.add('bg-green-500')
-// })
-
-// document.getElementById('btn-history').addEventListener('click', function(){
-//     this.classList.remove('bg-gray-400')
-//     this.classList.add('bg-green-400')
-// })
 
 const topButton = document.querySelectorAll('button');
 
@@ -64,15 +40,16 @@ document.getElementById('card-one-main-btn').addEventListener('click', function(
     }
 
     const addedAmountToNumber = getAddedAmountValueById('donation-added-amount')
+    
     const totalBalance = addedAmountToNumber + firstField;
     document.getElementById('donation-added-amount').innerText = totalBalance;
-
-
+    
     const mainAccount = getMinusFigure('minus-Amount')
     const newMinusAmount = mainAccount - firstField;
+    
     if (newMinusAmount >= 0) {
-       document.getElementById('minus-Amount').innerText = newMinusAmount;
-
+        document.getElementById('minus-Amount').innerText = newMinusAmount;
+        
         
         const div = document.createElement('div');
         const currentDate = new Date();
