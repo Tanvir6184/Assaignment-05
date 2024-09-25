@@ -7,11 +7,47 @@ document.getElementById('donation-btn').addEventListener('click', function(){
     ShowSomethingById('donation-card-main')
 })
 
+
+// window.addEventListener('scroll', function(){
+
+//     const scrolled = document.getElementById('navbar');
+
+//     if(window.scrollY > 50){
+//         scrolled.classList.add('backdrop:blur-md')
+//     }
+//     else{
+//         scrolled.classList.remove('backdrop:blur-md')
+//     }
+// })
+
+
+
+// document.getElementById('donation-btn').addEventListener('click', function(){
+
+//     this.classList.remove('bg-gray-400')
+//     this.classList.add('bg-green-500')
+// })
+
+// document.getElementById('btn-history').addEventListener('click', function(){
+//     this.classList.remove('bg-gray-400')
+//     this.classList.add('bg-green-400')
+// })
+
+const topButton = document.querySelectorAll('button');
+
+topButton.forEach(button => {
+    button.addEventListener('click', function(){
+        topButton.forEach(btn => btn.classList.remove('bg-green-400'))
+        this.classList.add('bg-green-400')
+    });
+}) ;
+
+
+
+
 document.getElementById('btn-history').addEventListener('click', function(){
     ShowSomethingById('transaction-container');
 })
-
-
 
 
 
@@ -37,13 +73,16 @@ document.getElementById('card-one-main-btn').addEventListener('click', function(
     if (newMinusAmount >= 0) {
        document.getElementById('minus-Amount').innerText = newMinusAmount;
 
-
-    //    Transaction history
-        const p = document.createElement('p');
-        p.innerText = `Added: ${firstField} Tk. Balance ${newMinusAmount}`
-        console.log(p)
-        document.getElementById('transaction-added').appendChild(p)
         
+        const div = document.createElement('div');
+        const currentDate = new Date();
+        const dateAndTime = currentDate.toLocaleString()
+        div.classList.add('bg-gray-100', 'w-full', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
+        div.innerHTML = `
+        <h4 class = "text-lg font-bold">${firstField} Taka is Donated for  donated for Flood at Noakhali, Bangladesh</h4>
+        <p>date and time: ${dateAndTime} </p>
+        `;
+        document.getElementById('transaction-added').appendChild(div);
 
     } else {
         alert('Insufficient balance');
@@ -75,6 +114,18 @@ document.getElementById('card-two-main-btn').addEventListener('click', function(
     const newMinusAmount = mainAccount - secondField;
     if (newMinusAmount >= 0) {
        document.getElementById('minus-Amount').innerText = newMinusAmount;
+
+       const div = document.createElement('div');
+       const currentDate = new Date();
+       const dateAndTime = currentDate.toLocaleString()
+       div.classList.add('bg-gray-100', 'w-full', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
+       div.innerHTML = `
+       <h4 class = "text-lg font-bold">${secondField} Taka is Donated for  donated for Flood relief at Feni, Bangladesh</h4>
+       <p>date and time: ${dateAndTime} </p>
+       `;
+       document.getElementById('transaction-added').appendChild(div);
+
+
     } else {
         alert('Insufficient balance');
         return;
@@ -104,6 +155,17 @@ document.getElementById('card-three-main-btn').addEventListener('click', functio
     const newMinusAmount = mainAccount - thirdField;
     if (newMinusAmount >= 0) {
        document.getElementById('minus-Amount').innerText = newMinusAmount;
+
+       const div = document.createElement('div');
+       const currentDate = new Date();
+       const dateAndTime = currentDate.toLocaleString()
+       div.classList.add('bg-gray-100', 'w-full', 'border-solid', 'border-2', 'border-[#D4D4D7]', 'border-opacity-40', 'mt-7');
+       div.innerHTML = `
+       <h4 class = "text-lg font-bold">${thirdField} Taka is Donated for  Aid for Injured in the Quota Movement</h4>
+       <p>date and time: ${dateAndTime} </p>
+       `;
+       document.getElementById('transaction-added').appendChild(div);
+
     } else {
         alert('Insufficient balance');
         return;
